@@ -1,0 +1,15 @@
+<div *ngIf="artist">
+  <header class="artist-header">
+    <h1>{{artist.name}}</h1>
+  </header>
+
+  <div *ngFor="let album of albums">
+    <div class="col-md-3">
+      <div class="album well">
+        <h4>{{album.name}}</h4>
+        <a routerLink="/album/{{album.id}}">Album Details</a>
+      </div>
+    </div>
+  </div>
+
+</div>

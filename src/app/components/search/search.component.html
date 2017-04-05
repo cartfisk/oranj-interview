@@ -1,0 +1,17 @@
+<h1>Spotify Search</h1>
+<form>
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="Search Artists..." [(ngModel)]="searchQuery" name="searchQuery" (keyup)="searchMusic()"/>
+
+  </div>
+</form>
+
+<div *ngIf="searchRes">
+  <div *ngFor="let artist of searchRes">
+    <div class="row">
+
+      <h4><a routerLink="/artist/{{artist.id}}">{{artist.name}}</a></h4>
+
+    </div>
+  </div>
+</div>
