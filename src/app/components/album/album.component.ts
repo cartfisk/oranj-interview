@@ -10,7 +10,8 @@ import { SpotifyService } from '../../services/spotify.service';
 @Component({
   moduleId: module.id,
   selector: 'album',
-  templateUrl: 'album.component.html'
+  templateUrl: 'album.component.html',
+  styleUrls: ['album.component.css']
 })
 export class AlbumComponent implements OnInit{
   id: string;
